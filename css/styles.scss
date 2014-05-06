@@ -171,6 +171,19 @@ p {
 .links {
 	width: 50%;
 	float: left;
+
+	a {
+		color: #E6003A;
+		text-decoration: none;
+		-webkit-transition: color .3s;
+		-moz-transition: color .3s;
+		-o-transition: color .3s;
+		transition: color .3s;
+
+		&:hover {
+			color: #555555;
+		}
+	}
 }
 
 .portfolio {
