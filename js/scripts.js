@@ -1,11 +1,8 @@
 $(document).ready(function(){
 
+	$(this).scrollTop(0);
+	
 	$('nav').smint();
 
-});
-
-$(window).on('beforeunload', function(){
-  
-	$(window).scrollTop(0);
 
 });

@@ -1,6 +1,6 @@
 @import "_normalize";
-@import "_portBox";
 @import "_iconfont";
+@import "_flexslider";
 
 /*********************************
 ----------------------------------
@@ -35,10 +35,10 @@ h3 {
 
 h1 {
 	font-weight: 600;
+	font: 4em;
 }
 
 h3 {
-	padding: 0 40px;
 	text-transform: uppercase;
 }
 
@@ -131,21 +131,36 @@ nav {
 
 /*********************************
 ----------------------------------
+		about
+----------------------------------
+*********************************/
+.about {
+	padding-top: 30px;
+}
+
+.main p:last-child {
+	padding-bottom: 50px;
+}
+
+
+
+/*********************************
+----------------------------------
 		article
 ----------------------------------
 *********************************/
 article {
 	width: 100%;
-	text-align: center;
 }
 
 section {
 	width: 80%;
 	margin: auto;
+	border-bottom: 1px solid #bdbdbd;
 }
 
 p {
-	width: 80%;
+	width: 90%;
 	margin: auto;
 	font-size: 1.5rem;
 	font-weight: 200;
@@ -164,50 +179,109 @@ p {
 ----------------------------------
 *********************************/
 .portfolio_intro {
-	margin-bottom: 30px;
+	margin-bottom: 80px;
 }
 
 .links {
-	width: 50%;
+	width: 100%;
 	float: left;
-
-	a {
-		color: #E6003A;
-		text-decoration: none;
-		-webkit-transition: color .3s;
-		-moz-transition: color .3s;
-		-o-transition: color .3s;
-		transition: color .3s;
-
-		&:hover {
-			color: #555555;
-		}
-	}
 }
 
 .portfolio {
-	padding-top: 60px;
+	padding-top: 30px;
 }
 
-.main h5 {
-	margin-top: 2.5em;
+article h5 {
+	padding-left: 40px;
 	margin-bottom: 1em;
 }
 
-
-
-/*********************************
-----------------------------------
-		about
-----------------------------------
-*********************************/
-.about {
-	padding-top: 70px;
+.project {
+	margin-bottom: 100px;
+	margin-left: 10%;
+	float: left;
 }
 
-.main p:last-child {
-	border-bottom: 1px solid #bdbdbd;
-	padding-bottom: 80px;
+.project-pics{
+	width: 50%;
+	float: left;
+
+	img {
+		width:100%;	
+		float: left;
+	}
+}
+
+.project-info {
+	float: left;
+	width: 44%;
+	padding:0 0 0 40px;
+	line-height: 28px;
+
+	h3 {
+		color: #E6003A;
+	}
+
+	h4 {
+		font-size: 18px;
+		border-bottom: 1px solid #e3e3e3;
+		margin-top: 10px;
+		margin-bottom: 0px;
+		letter-spacing: 2px;
+	}
+
+	p {
+		font-size: 16px;
+		color: #030303;		
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		color: #000;
+	}
+}
+
+.project-info h3,
+.project-info h4,
+.project-info ul,
+.project-info p,
+.project-button {
+	margin: 10px 0;
+	float: left;
+	width: 100%;	
+}
+
+.project-button{
+	line-height: 45px;
+	height: 45px;
+	color: #E6003A;
+	text-align: center;
+	margin-top: 15px;
+	letter-spacing: 2px;
+	border: 2px solid #E6003A;
+	width: 99%;
+	box-shadow: inset 0 0 1px 1px #fff;
+	-webkit-box-shadow: inset 0 0 1px 1px #fff;
+	transition: all .15s linear;
+	-webkit-transition: all .15s linear;
+	-moz-transition: all .15s linear;
+	text-shadow:none;	
+
+	&:hover{
+		color: #ffffff;
+		background: #E6003A;
+		-webkit-box-shadow: inset 0 0 1px 1px #C40032;
+		box-shadow: inset 0 0 1px 1px #C40032;
+		cursor: pointer;
+	}
+
+	&:active {
+		background-color:#e3e3e3;
+		color:#bfbfbf !important;
+		-webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+		box-shadow: inset 0 0 1px 1px #e3e3e3; 
+	}
 }
 
 
@@ -313,7 +387,99 @@ div.bottom {
 
 /*********************************
 ----------------------------------
-	media queries - medium
+	Detail Pages
+----------------------------------
+*********************************/
+.detail-page {
+	margin-top: 120px;
+
+	h3 {
+		color: #E6003A;
+	}
+}
+
+.more-info-left a,
+.more-info-right a {
+	color: #111;
+	border-bottom: 1px solid #555;
+
+	&:hover {
+		color: #E6003A;
+	}
+}
+
+
+.more-info-left {
+	float: left;
+	width: 48%;
+	clear: both;
+	
+	p {
+	color: #555555;
+	font: 1em 'Open Sans', sans-serif;
+	line-height: 1.4;
+	width: 100%;
+	}
+}
+
+.more-info-right {
+	float: right;
+	width: 46%;
+	
+	p {
+	color: #555555;
+	font: 1em 'Open Sans', sans-serif;
+	line-height: 1.4;
+	width: 100%;
+	}
+}
+
+.previous .project-button {
+	width: 25%;
+	float: left;
+	margin-bottom: 50px;
+}
+
+.next .project-button {
+	width: 25%;
+	float: right;
+	margin-bottom: 50px;
+}
+
+.flexslider {
+	background: none;
+	border: none;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	-ms-border-radius: none;
+	-o-border-radius: none;
+	border-radius: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+
+}
+
+
+
+/*********************************
+----------------------------------
+	media queries - larger
+----------------------------------
+*********************************/
+@media screen and (max-width: 1300px) {
+
+	.project {
+		margin-left: 0;
+	}
+
+}
+
+
+
+/*********************************
+----------------------------------
+	media queries - large
 ----------------------------------
 *********************************/
 @media screen and (max-width: 1010px) {
@@ -324,6 +490,43 @@ div.bottom {
 
 	.links h3 {
 		color: #E6003A;
+	}
+
+}
+
+
+
+/*********************************
+----------------------------------
+	media queries - medium
+----------------------------------
+*********************************/
+@media only screen and (max-width: 950px){
+	.project-pics{
+		width: 100%;
+	}
+	
+	.project-info{
+		width: 100%;
+		padding:0;
+		margin-top:40px;
+	}
+
+	.more-info-left {
+		width: 100%;
+	}
+
+	.more-info-right {
+		width: 100%;
+	}
+
+	.previous .project-button,
+	.next .project-button{
+		width: 35%;
+	}
+
+	.flexslider {
+		width: 100%;
 	}
 
 }
@@ -384,82 +587,60 @@ div.bottom {
 		margin-top: 100px;
 	}
 
-	header h1 a {
-		font-size: .8em;
+	.project-info{
+		text-align:center;
+		margin-top:0;
+	}
+	
+	.project-info h3{
+		font-size:25px;
+		line-height:30px;
+	}
+
+	.more-info-left p,
+	.more-info-right p {
+		margin-left: 30%;
+		width: 160%;
+	}
+
+	.more-info-left, 
+	.more-info-right {
+		width: 48%;
+		float: left;
+		clear: both;
+	}
+
+	.about h3,
+	.portfolio h3 {
+		margin-left: 5%;
+	}
+
+	.previous .project-button,
+	.next .project-button{
+		width: 48%;
 	}
 
 }
 
 
 
-/*********************************
-----------------------------------
-	resume
-----------------------------------
-*********************************/
-.experience {
-	float: left;
-	background: #FFF;
-	border-radius: 10px;
-	margin: 2% 0;
-	padding: 5% 5% 5% 2%;
-}
-
-.experience ul {
-	line-height: 1.5;
-}
-
-.separate {
-	height: 1px;
-	background: #8C2E2E;
-	margin-bottom: 30px;
-}
 
 
 
-/*********************************
-----------------------------------
-	portBox
-----------------------------------
-*********************************/
-.portBox {
-	background: #eee;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-	border-radius: 0;
 
-	h3 {
-		font-size: 1.5em;
-		font-weight: 200;
-		font-weight: 300;
-		font: 4em;
-		color: #bdbdbd;
-		padding: 0;
-		text-transform: uppercase;
-	}
-}
 
-.portBox p,
-.portBox li {
-	color: #555555;
-	font: 1em 'Open Sans', sans-serif;
-	line-height: 1.4;
-}
 
-.project-button {
-	background: #555555;
-	-webkit-box-shadow: inset 0 0 1px 1px #444444;
-	box-shadow: inset 0 0 1px 1px #444444;
 
-	&:hover {
-		background: #E6003A;
-		-webkit-box-shadow: inset 0 0 1px 1px #C40032;
-		box-shadow: inset 0 0 1px 1px #C40032;
-	}
-}
 
-.portBox p a {
-	text-decoration: none;
-	color: #E6003A;
-}
+
+
+
+
+
+
+
+
+
+
+
 
